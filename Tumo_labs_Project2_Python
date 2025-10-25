@@ -1,0 +1,37 @@
+import random
+
+def roll_dice():
+    zar1 = random.randint(1,6) # random number between 1-6 inclusive
+    zar2 = random.randint(1,6)
+    sum = zar1 + zar2
+    print(f"Dear player, you have rolled {zar1} + {zar2} = {sum}")
+    return sum
+
+def win_lose():
+    first = roll_dice()
+
+    if first in (7,11):
+        print("You won the game!!")
+        return
+
+    elif first in (2, 3, 12):
+        print("Unfortunately, you have lost the game(")
+        return
+
+    else:
+        goal = first
+        print(f"Your goal is now {goal}. Keep rolling until you get a {goal} again.")
+        print("Remember, if you roll a 7 before that, you will lose")
+
+    while True:
+        input("Press Enter to roll again...")
+        second = roll_dice()
+
+        if second == goal:
+            print(f"You rolled your goal number {goal}. You won!! ")
+            break
+        elif second == 7:
+            print("You rolled a 7 before your goal. You lost(( ")
+            break
+        
+win_lose()
