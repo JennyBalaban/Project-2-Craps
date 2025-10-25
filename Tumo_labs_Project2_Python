@@ -31,7 +31,7 @@ def win_lose():
             print(f"You rolled your goal number {goal}. You won!! ")
             break
         elif second == 7:
-            print("You rolled a 7 before your goal. You lost(( ")
+            print("You rolled a 7 before your goal. You lost( ")
             break
         
 win_lose()
