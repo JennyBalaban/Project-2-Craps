@@ -1,7 +1,7 @@
 import random
 
 def roll_dice():
-    zar1 = random.randint(1,6) # random number between 1-6 inclusive
+    zar1 = random.randint(1,6) # it is a random number between 1-6 inclusive
     zar2 = random.randint(1,6)
     sum = zar1 + zar2
     print(f"Dear player, you have rolled {zar1} + {zar2} = {sum}")
@@ -31,7 +31,7 @@ def win_lose():
             print(f"You rolled your goal number {goal}. You won!! ")
             break
         elif second == 7:
-            print("You rolled a 7 before your goal. You lost(( ")
+            print("You rolled a 7 before your goal. You lost((( ")
             break
         
 win_lose()
